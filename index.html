@@ -62,6 +62,12 @@ This plots the decay of epsilon and alpha over the number of steps, k. If you de
 <p><img src="https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true" alt="Monitor_grid">
 This is one example of the visualization functions <em>visQ.m</em> and <em>visQ_im.m</em>. These functions visualize any matrix that represents some values in the grid. You can use it to visualize the Q matrix, the N matrix or, in this example, the reward matrix.</p>
 
+<h3>
+<a id="visualization-of-the-path-at-optimal-policy" class="anchor" href="#visualization-of-the-path-at-optimal-policy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of the path at optimal policy</h3>
+
+<p><img src="https://github.com/RobRomijnders/q_learning/blob/master/optimal_path.png?raw=true" alt="Vis_path">
+This visualizes the path following from the optimal policy. By the Principle of Optimality for the Bellman equations, we can generate a path associated with the optimal policy. At every state, the action is the action with the highest Q value. The function <em>plot_pol.m</em> implements exactly that and also return the associated reward and return.</p>
+
 <h1>
 <a id="further-improvements" class="anchor" href="#further-improvements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further improvements</h1>
 
