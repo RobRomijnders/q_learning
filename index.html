@@ -28,13 +28,13 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a id="q-learning" class="anchor" href="#q-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q-learning</h3>
+        <h1>
+<a id="q-learning" class="anchor" href="#q-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q-learning</h1>
 
 <p>This post implements a Q-learning algorithm with epsilon-greedy approach for a robot in a 2D grid. Q-learning is an approach in reinforcement learning to solve the Bellman equations. Other than for <em>value iterations</em>, the state-transition-model can be unknown and based solely on observed state transitions.</p>
 
-<h3>
-<a id="our-setting" class="anchor" href="#our-setting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our setting</h3>
+<h1>
+<a id="our-setting" class="anchor" href="#our-setting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our setting</h1>
 
 <p>Our setting is a 2D grid, loaded with rewards. Q-learning would also work for a sparse grid with rewards. However, to learn the reinforcement learning algorithms, we would advise to start with a simple grid like this. The imaginary <em>robot</em> starts at state 0. The final state is defined as state 100, where state 1-100 represent the column-wise linear indices of the 10 by 10 grid. 
 <img src="https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true" alt="An example of reward_normal.mat"></p>
@@ -44,26 +44,26 @@
 
 <p>The Q-learning function in <em>RL_main_github.m</em> calls for some numerical values. That's it. If you want more intuition for the learning procedure, many of the functions take a boolean flag for visualization.</p>
 
-<h1>
-<a id="visualization-of-entries-of-q-matrix" class="anchor" href="#visualization-of-entries-of-q-matrix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of entries of Q matrix</h1>
+<h3>
+<a id="visualization-of-entries-of-q-matrix" class="anchor" href="#visualization-of-entries-of-q-matrix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of entries of Q matrix</h3>
 
 <p><img src="https://github.com/RobRomijnders/q_learning/blob/master/monitor_Q_values.png?raw=true" alt="Monitor_Q">
 This monitors random entries of the Q matrix. The lower right plot shows the Exponentially Weighted Moving Average of the convergence criterion, <em>Q_diff</em>. With this diagram, we can visually inspect the convergence of the Q matrix from both the random entries and the convergence criterion itself.</p>
 
-<h1>
-<a id="visualization-of-epsilon-and-alpha-decay" class="anchor" href="#visualization-of-epsilon-and-alpha-decay" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of epsilon and alpha decay</h1>
+<h3>
+<a id="visualization-of-epsilon-and-alpha-decay" class="anchor" href="#visualization-of-epsilon-and-alpha-decay" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of epsilon and alpha decay</h3>
 
 <p><img src="https://github.com/RobRomijnders/q_learning/blob/master/ea_decay.png?raw=true" alt="Monitor_ea">
 This plots the decay of epsilon and alpha over the number of steps, k. If you design your own decay function, this script might be a good start for visualizing your decay.</p>
 
-<h1>
-<a id="visualization-of-any-matrix-representing-the-grid" class="anchor" href="#visualization-of-any-matrix-representing-the-grid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of any matrix representing the grid</h1>
+<h3>
+<a id="visualization-of-any-matrix-representing-the-grid" class="anchor" href="#visualization-of-any-matrix-representing-the-grid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of any matrix representing the grid</h3>
 
 <p><img src="https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true" alt="Monitor_grid">
 This is one example of the visualization functions <em>visQ.m</em> and <em>visQ_im.m</em>. These functions visualize any matrix that represents some values in the grid. You can use it to visualize the Q matrix, the N matrix or, in this example, the reward matrix.</p>
 
-<h3>
-<a id="further-improvements" class="anchor" href="#further-improvements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further improvements</h3>
+<h1>
+<a id="further-improvements" class="anchor" href="#further-improvements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further improvements</h1>
 
 <p>This code implements Q-learning at its minimal form. For anyone new to Q-learning, the reward matrices and a 10x10 grid form a good first learning experience.
 Further improvements would be:</p>
