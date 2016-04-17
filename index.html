@@ -40,6 +40,29 @@
 <img src="https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true" alt="An example of reward_normal.mat"></p>
 
 <h3>
+<a id="visualizing-under-the-hood" class="anchor" href="#visualizing-under-the-hood" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualizing under the hood</h3>
+
+<p>The Q-learning function in <em>RL_main_github.m</em> calls for some numerical values. That's it. If you want more intuition for the learning procedure, many of the functions take a boolean flag for visualization.</p>
+
+<h1>
+<a id="visualization-of-entries-of-q-matrix" class="anchor" href="#visualization-of-entries-of-q-matrix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of entries of Q matrix</h1>
+
+<p><img src="https://github.com/RobRomijnders/q_learning/blob/master/monitor_Q_values.png?raw=true" alt="Monitor_Q">
+This monitors random entries of the Q matrix. The lower right plot shows the Exponentially Weighted Moving Average of the convergence criterion, <em>Q_diff</em>. With this diagram, we can visually inspect the convergence of the Q matrix from both the random entries and the convergence criterion itself.</p>
+
+<h1>
+<a id="visualization-of-epsilon-and-alpha-decay" class="anchor" href="#visualization-of-epsilon-and-alpha-decay" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of epsilon and alpha decay</h1>
+
+<p><img src="https://github.com/RobRomijnders/q_learning/blob/master/ea_decay.png?raw=true" alt="Monitor_ea">
+This plots the decay of epsilon and alpha over the number of steps, k. If you design your own decay function, this script might be a good start for visualizing your decay.</p>
+
+<h1>
+<a id="visualization-of-any-matrix-representing-the-grid" class="anchor" href="#visualization-of-any-matrix-representing-the-grid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualization of any matrix representing the grid</h1>
+
+<p><img src="https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true" alt="Monitor_grid">
+This is one example of the visualization functions <em>visQ.m</em> and <em>visQ_im.m</em>. These functions visualize any matrix that represents some values in the grid. You can use it to visualize the Q matrix, the N matrix or, in this example, the reward matrix.</p>
+
+<h3>
 <a id="further-improvements" class="anchor" href="#further-improvements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further improvements</h3>
 
 <p>This code implements Q-learning at its minimal form. For anyone new to Q-learning, the reward matrices and a 10x10 grid form a good first learning experience.
@@ -48,6 +71,7 @@ Further improvements would be:</p>
 <ul>
 <li>Explore the N matrix. The code saves state-action pairs to a big matrix named <em>N</em>. Exploring this matrix will giver you lots of intuition regarding the behavior of epsilon-greedy.</li>
 <li>Explore different values for gamma. The example code in <em>RL_main_github.m</em> calls for gamma at 0.5 and 0.9. You'll see that the optimal policy won't reach final state for gamma = 0.5, but it does for gamma=0.9. The threshold lies at gamma=0.8. Interestingly, the optimal policy at gamma=0.7 does reach final state for reward function <em>reward_long.mat</em>. Vice versa, optimal policy at gamma=0.9 is the lowest gamma for which the optimal policy reaches final state with reward function <em>reward_short.mat</em>.</li>
+<li>Explore the updates of epsilon and alpha. For this implementation, epsilon and alpha follow the same formula. You might obtain better performances at different formulas. Moreover, you might find even better performances with your own formulas for updating epsilon and alpha. Start with the script <em>eak.m</em> for doing so.</li>
 </ul>
       </section>
       <footer>
