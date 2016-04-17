@@ -38,6 +38,17 @@
 
 <p>Our setting is a 2D grid, loaded with rewards. Q-learning would also work for a sparse grid with rewards. However, to learn the reinforcement learning algorithms, we would advise to start with a simple grid like this. The imaginary <em>robot</em> starts at state 0. The final state is defined as state 100, where state 1-100 represent the column-wise linear indices of the 10 by 10 grid. 
 <img src="https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true" alt="An example of reward_normal.mat"></p>
+
+<h3>
+<a id="further-improvements" class="anchor" href="#further-improvements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further improvements</h3>
+
+<p>This code implements Q-learning at its minimal form. For anyone new to Q-learning, the reward matrices and a 10x10 grid form a good first learning experience.
+Further improvements would be:</p>
+
+<ul>
+<li>Explore the N matrix. The code saves state-action pairs to a big matrix named <em>N</em>. Exploring this matrix will giver you lots of intuition regarding the behavior of epsilon-greedy.</li>
+<li>Explore different values for gamma. The example code in <em>RL_main_github.m</em> calls for gamma at 0.5 and 0.9. You'll see that the optimal policy won't reach final state for gamma = 0.5, but it does for gamma=0.9. The threshold lies at gamma=0.8. Interestingly, the optimal policy at gamma=0.7 does reach final state for reward function <em>reward_long.mat</em>. Vice versa, optimal policy at gamma=0.9 is the lowest gamma for which the optimal policy reaches final state with reward function <em>reward_short.mat</em>.</li>
+</ul>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/RobRomijnders">RobRomijnders</a></p>
