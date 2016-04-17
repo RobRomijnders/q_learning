@@ -1,0 +1,6 @@
+{
+  "name": "Q learning",
+  "tagline": "Implementation of epsilon-greedy q-learning for robot on 2D grid",
+  "body": "### Q-learning\r\nThis post implements a Q-learning algorithm with epsilon-greedy approach for a robot in a 2D grid. Q-learning is an approach in reinforcement learning to solve the Bellman equations. Other than for _value iterations_, the state-transition-model can be unknown and based solely on observed state transitions.\r\n\r\n### Our setting\r\nOur setting is a 2D grid, loaded with rewards. Q-learning would also work for a sparse grid with rewards. However, to learn the reinforcement learning algorithms, we would advise to start with a simple grid like this. The imaginary _robot_ starts at state 0. The final state is defined as state 100, where state 1-100 represent the column-wise linear indices of the 10 by 10 grid. \r\n![An example of reward_normal.mat](https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true)",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

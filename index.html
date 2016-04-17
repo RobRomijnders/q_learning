@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Q learning by RobRomijnders</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Q learning</h1>
+        <p>Implementation of epsilon-greedy q-learning for robot on 2D grid</p>
+
+        <p class="view"><a href="https://github.com/RobRomijnders/q_learning">View the Project on GitHub <small>RobRomijnders/q_learning</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/RobRomijnders/q_learning/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/RobRomijnders/q_learning/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/RobRomijnders/q_learning">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="q-learning" class="anchor" href="#q-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q-learning</h3>
+
+<p>This post implements a Q-learning algorithm with epsilon-greedy approach for a robot in a 2D grid. Q-learning is an approach in reinforcement learning to solve the Bellman equations. Other than for <em>value iterations</em>, the state-transition-model can be unknown and based solely on observed state transitions.</p>
+
+<h3>
+<a id="our-setting" class="anchor" href="#our-setting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our setting</h3>
+
+<p>Our setting is a 2D grid, loaded with rewards. Q-learning would also work for a sparse grid with rewards. However, to learn the reinforcement learning algorithms, we would advise to start with a simple grid like this. The imaginary <em>robot</em> starts at state 0. The final state is defined as state 100, where state 1-100 represent the column-wise linear indices of the 10 by 10 grid. 
+<img src="https://github.com/RobRomijnders/q_learning/blob/master/reward_visualization.png?raw=true" alt="An example of reward_normal.mat"></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/RobRomijnders">RobRomijnders</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
